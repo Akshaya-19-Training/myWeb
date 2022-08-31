@@ -10,12 +10,16 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+ - checkout: self
+   clean: true
+ - task: Bash@3
+   displayName:Sync with Adobe Repo
+   condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+   inputs:
+    targetType: 'inline'
+    script:
+     git remote add adobe https://git.cloudmanager.adobe.com/sapientpartnersandbox/ymltry/
+     git checkout main
+     git pull
+     git push adobe HEAD:main
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    
-     
-  displayName: 'Run a multi-line script'
