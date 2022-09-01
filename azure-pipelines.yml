@@ -13,7 +13,7 @@ steps:
   - checkout: self
     clean: true
   - task: Bash@3
-    displpayName: Sync with Adobe Repo
+    displayName: Sync with Adobe Repo
     condition: eq(variables['Build.SourceBranch'],'refs/heads/main')
     inputs:
      targetType: 'inline'
