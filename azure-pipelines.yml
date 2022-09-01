@@ -20,7 +20,7 @@ steps:
      script: |
       git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
       git pull 
-      git push adobe main
+      git push adobe HEAD:main
       
     
 
