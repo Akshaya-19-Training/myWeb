@@ -10,17 +10,26 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  - checkout: self
+    clean: true
+  - task: Bash@3
+    displpayName: Sync with Adobe Repo
+    condition: eq(variables['Build.SourceBranch'],'refs/heads/main')
+    inputs:
+     targetType: 'inline'
+     - script: echo Hello, world!
+       displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+     - script: |
+        echo Add other tasks to build, test, and deploy your project.
+        echo See https://aka.ms/yaml
 
-- script: |
-    git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
-    git pull https://github.com/Akshaya-19-Training/myWeb.git
-    git push adobe main
+       displayName: 'Run a multi-line script'
+
+     - script: |
+        git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
+        git pull https://github.com/Akshaya-19-Training/myWeb.git
+        git push adobe main
       
-  displayName: 'Run a multi-line script'
+    
 
