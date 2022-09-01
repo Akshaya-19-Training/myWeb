@@ -15,12 +15,7 @@ steps:
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-- script: |
-    git remote add adobe https://$(git_user_id):$(git_pass)@git.cloudmanager.adobe.com/sapientpartnersandbox/yamltask/
-    git checkout main
-    git pull
-    git push adobe master   
+    echo See https://aka.ms/yaml   
      
   displayName: 'Run a multi-line script'
 
