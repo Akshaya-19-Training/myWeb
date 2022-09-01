@@ -21,7 +21,7 @@ steps:
       git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
       git pull 
       git push adobe HEAD:main
-      
+      GET https://cloudmanager.adobe.io/api/program/$(pgmid)/pipeline/$(pipid)
       
     
 
