@@ -28,7 +28,7 @@ steps:
 
      - script: |
         git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
-        git pull https://github.com/Akshaya-19-Training/myWeb.git
+        git pull 
         git push adobe main
       
     
