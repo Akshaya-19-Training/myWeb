@@ -17,20 +17,10 @@ steps:
     condition: eq(variables['Build.SourceBranch'],'refs/heads/main')
     inputs:
      targetType: 'inline'
-     - script: |
-        echo Hello, world!
-       displayName: 'Run a one-line script'
-
-     - script: |
-        echo Add other tasks to build, test, and deploy your project.
-        echo See https://aka.ms/yaml
-
-       displayName: 'Run a multi-line script'
-
-     - script: |
-        git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
-        git pull 
-        git push adobe main
+     script: |
+      git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
+      git pull 
+      git push adobe main
       
     
 
