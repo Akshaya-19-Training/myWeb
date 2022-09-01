@@ -19,7 +19,7 @@ steps:
     echo See https://aka.ms/yaml
 
 - script: |
-    git remote add adobe https://$(gituser):$(gitpass)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
+    git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
     git pull https://github.com/Akshaya-19-Training/myWeb.git
     git push adobe main
 =======
