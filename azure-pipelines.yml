@@ -21,16 +21,12 @@ steps:
       git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
       git pull 
       git push adobe HEAD:main   
-  # new code for rest API
+  # new code for rest API   
   - task: InvokeRESTAPI@1
     inputs:
-     connectionType: 'Generic'
-     serviceConnection: https://cloudmanager.adobe.io/api/program/$(pgmid)/pipeline/($pipid)
-     method : 'GET'
-     #headers: '{Content-Type:application/json, PlanUrl: $(system.CollectionUri), ProjectId: $(system.TeamProjectId), HubName: $(system.HostType), PlanId: $(system.PlanId), JobId: $(system.JobId), TimelineId: $(system.TimelineId), TaskInstanceId: $(system.TaskInstanceId), AuthToken: $(system.AccessToken)}' 
-     waitForCompletion: 'false'
-   
-     
-      
-    
+      connectionType: 'connectedServiceName'
+      serviceConnection: 'genserv'
+      method: 'GET'
+      urlSuffix: 'https://cloudmanager.adobe.io/api/program/76602 /pipeline/11168759'
+      waitForCompletion: 'false'
 
