@@ -23,7 +23,7 @@ stages:
               method: 'GET'
               headers: |
                 {
-                "authorization": $(BEARER)
+                "authorization": "Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2NjIxMTQ0Mjk3MTNfMWRjZDUwMzgtNDIwZS00MjA0LWE2MTEtNzE4NTk0ZTJhZmMxX3VlMSIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJjbG91ZG1hbmFnZXJfYXBpX2RvY3MiLCJ1c2VyX2lkIjoiQTVDQjM0M0Y2MzA0OTRBNTBBNDk1RTc3QEFkb2JlSUQiLCJhcyI6Imltcy1uYTEiLCJhYV9pZCI6IkE1Q0IzNDNGNjMwNDk0QTUwQTQ5NUU3N0BBZG9iZUlEIiwiY3RwIjowLCJmZyI6IldYWVhHVFhOWFBFN0lIV0tHT1FGWUhRQUJZPT09PT09Iiwic2lkIjoiMTY2MjAyMzM0NzMzNl9hMzY1YzdhNS0xOGM2LTRiODAtYmVmNi1lMzJkOWY2NzVlZDlfdWUxIiwibW9pIjoiYzMyZTkzNzYiLCJwYmEiOiIiLCJleHBpcmVzX2luIjoiODY0MDAwMDAiLCJzY29wZSI6IkFkb2JlSUQsb3BlbmlkLHJlYWRfb3JnYW5pemF0aW9ucyxhZGRpdGlvbmFsX2luZm8ucHJvamVjdGVkUHJvZHVjdENvbnRleHQsYWRkaXRpb25hbF9pbmZvLnJvbGVzLGduYXYiLCJjcmVhdGVkX2F0IjoiMTY2MjExNDQyOTcxMyJ9.SvtNW2NHBbnlTmaeTPW1Ss_0ggCnmx9mHQrR_rjhOPvTVOU93VEc48tUvT2aDlnRh6IjfItSRzawTasHaVdRT42ryqPN8el_SuGpz2GKLR63Bd8aiaxWbBCHY0gIvbP4E6b1R7IC9ShXNISLOr2YxxHtBsjNd8j4tizGm2oyuJJ4aeeDOli2TvZu_5HI1aFJbnoUEm3C3oxkN9Hg7ys8xqAyd2-3JlkWEDpc0tgmUrlu-JBOxPPBbgl7zhipDEY9_Ta6fLK0kX2ZEFD6cwR_kuJ0ZCbmvwn2ptiIrkPQYuynySHRZrVeTWeg0XoUTMN89W42MrlRWoFzVmKhlru5aA"
                 }
               urlSuffix: '/api/programs'
               waitForCompletion: 'false'
