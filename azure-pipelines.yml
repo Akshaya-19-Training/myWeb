@@ -23,7 +23,7 @@ stages:
               method: 'GET'
               headers: |
                 {
-                "authorization":"$(BEARER)"
+                "authorization": $(BEARER)
                 }
               urlSuffix: '/api/programs'
               waitForCompletion: 'false'
