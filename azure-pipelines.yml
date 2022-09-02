@@ -25,7 +25,7 @@ stages:
                 {
                 "authorization":"$(BEARER)"
                 }
-              urlSuffix: '/api/program/76602/pipeline/11168759'
+              urlSuffix: '/api/programs'
               waitForCompletion: 'false'
 
 
