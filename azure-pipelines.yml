@@ -37,5 +37,6 @@ steps:
       connectionType: 'connectedServiceName'
       serviceConnection: 'genserv'
       method: 'GET'
+      urlSuffix: 'https://cloudmanager.adobe.io/api/program/76602 /pipeline/11168759'
       waitForCompletion: 'false'
 
