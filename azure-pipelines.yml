@@ -24,9 +24,12 @@ stages:
               urlSuffix: '/api/v3/exchange_rates'
               waitForCompletion: 'false'
 
+
               
    
  
+
+  
 
 
 
