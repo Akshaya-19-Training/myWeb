@@ -9,18 +9,20 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-  - checkout: self
-    clean: true
-  - task: Bash@3
-    displayName: Sync with Adobe Repo
-    condition: eq(variables['Build.SourceBranch'],'refs/heads/main')
-    inputs:
-     targetType: 'inline'
-     script: |
-      git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
-      git pull 
-      git push adobe HEAD:main   
+stages:
+  - stage: Run_Tests
+    jobs:
+      - job: RA001
+        pool: server
+        steps:
+          - task: InvokeRESTAPI@1
+            displayName: "Run Test"
+            inputs:
+              connectionType: 'connectedServiceName'
+              serviceConnection: 'newconnection'
+              method: 'GET'
+              waitForCompletion: 'false'
+   
  
 
 
