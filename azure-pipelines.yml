@@ -18,7 +18,7 @@ steps:
     inputs:
      targetType: 'inline'
      script: |
-      git remote add adobe https://$(gituser-id):$(gitpassword)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
+      git remote add adobe https://$(gituser_id):$(git_pass)@git.cloudmanager.adobe.com/sapientpartnersandbox/Task/
       git pull 
       git push adobe HEAD:main   
  
