@@ -21,7 +21,10 @@ stages:
               connectionType: 'connectedServiceName'
               serviceConnection: 'newconnection'
               method: 'GET'
+              urlSuffix: '/api/v3/exchange_rates'
               waitForCompletion: 'false'
+
+              
    
  
 
